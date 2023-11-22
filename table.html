@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <link rel="stylesheet" href="table.css">
+</head>
+<body>
+
+<form id="orderForm" action="your_payment_processing_script.php" method="post">
+  <h2>Contact</h2>
+
+  <label for="email">Email or mobile phone number:</label>
+  <input type="text" id="email" name="email" required>
+
+  <label for="newsOffers">Email me with news and offers:</label>
+  <input type="checkbox" id="newsOffers" name="newsOffers">
+
+  <h2>Delivery</h2>
+
+  <label for="firstName">First name:</label>
+  <input type="text" id="firstName" name="firstName" required>
+
+  <label for="lastName">Last name:</label>
+  <input type="text" id="lastName" name="lastName" required>
+
+  <label for="company">Company (optional):</label>
+  <input type="text" id="company" name="company">
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" required>
+
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city" required>
+
+  <label for="postalCode">Postal Code:</label>
+  <input type="text" id="postalCode" name="postalCode" pattern="[0-9]{4}" required>
+
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <label for="saveInfo">Save this information for next time:</label>
+  <input type="checkbox" id="saveInfo" name="saveInfo">
+
+  <h2>Shipping method</h2>
+
+  <label for="shippingMethod">Choose a shipping method:</label>
+  <select id="shippingMethod" name="shippingMethod" required>
+    <option value="standard">Standard - Rs 99.00</option>
+  </select>
+
+  <h2>Payment</h2>
+
+  <p>All transactions are secure and encrypted.</p>
+
+  <label for="paymentMethod">Choose a payment method:</label>
+  <select id="paymentMethod" name="paymentMethod" required>
+    <option value="payfast">PAYFAST (Pay via Debit/Credit/Wallet/Bank Account)</option>
+    <option value="cod">Cash on Delivery (COD)</option>
+  </select>
+
+  <h2>Billing address</h2>
+
+  <label for="billingAddress">Choose a billing address:</label>
+  <select id="billingAddress" name="billingAddress" required>
+    <option value="sameAsShipping">Same as shipping address</option>
+    <option value="different">Use a different billing address</option>
+  </select>
+
+  <button type="submit">Pay now</button>
+</form>
+
+</body>
+</html>
